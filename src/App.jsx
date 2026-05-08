@@ -3,6 +3,8 @@ import { motion, useInView, AnimatePresence } from "framer-motion";
 import { Heart, Music, Play, Pause, ExternalLink, Star, RotateCcw, ChevronDown } from "lucide-react";
 import image1 from "./assets/image1.jpeg";
 import component1 from "./assets/component1.jpg";
+import component2 from "./assets/component2.jpg";
+import component3 from "./assets/component3.jpg";
 
 // ============================================================
 // 🎨 FONT IMPORTS
@@ -145,7 +147,7 @@ const HeroSection = () => {
     <section
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4 py-12"
       style={{
-        backgroundImage: `linear-gradient(rgba(253, 246, 227, 0.68), rgba(253, 246, 227, 0.68)), url(${component1})`,
+        backgroundImage: `linear-gradient(rgba(253, 246, 227, 0.45), rgba(253, 246, 227, 0.45)), url(${component1})`,
         backgroundPosition: "center",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
@@ -258,13 +260,13 @@ const HeroSection = () => {
         className="text-center px-4 relative z-10"
       >
         {/* Small handwritten label above */}
-        <p className="font-caveat text-amber-600 text-lg mb-1" style={{ letterSpacing: "0.05em" }}>
+        <p className="font-caveat text-amber-900 text-lg mb-1" style={{ letterSpacing: "0.05em", textShadow: "0 0 12px rgba(255, 255, 255, 0.8), 0 0 20px rgba(192, 57, 43, 0.4)" }}>
           — for you, always —
         </p>
 
         <h1
           className="font-playfair italic text-amber-900 leading-tight mb-4"
-          style={{ fontSize: "clamp(2.4rem, 10vw, 3rem)", fontWeight: 600 }}
+          style={{ fontSize: "clamp(2.4rem, 10vw, 3rem)", fontWeight: 600, textShadow: "0 0 15px rgba(255, 255, 255, 0.8), 0 0 30px rgba(192, 57, 43, 0.4)" }}
         >
           Happy Birthday
         </h1>
@@ -281,8 +283,8 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.9 }}
-          className="font-kalam text-amber-800 leading-relaxed"
-          style={{ fontSize: "1.05rem", maxWidth: 300, margin: "0 auto" }}
+          className="font-kalam text-black leading-relaxed"
+          style={{ fontSize: "1.05rem", maxWidth: 300, margin: "0 auto", textShadow: "0 0 12px rgba(255, 255, 255, 0.7), 0 0 20px rgba(192, 57, 43, 0.3)" }}
         >
           {/* ✏️ CHANGE THIS to your personal birthday message */}
           Today is all about you — your laugh, your warmth, the quiet way you make everything feel a little more like home. I made this just for you.
@@ -295,8 +297,8 @@ const HeroSection = () => {
         animate={{ y: [0, 6, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
       >
-        <span className="font-caveat text-amber-600 text-sm">scroll down</span>
-        <ChevronDown size={16} className="text-amber-500" />
+        <span className="font-caveat text-amber-900 text-sm" style={{ textShadow: "0 0 10px rgba(255, 255, 255, 0.8), 0 0 15px rgba(192, 57, 43, 0.4)" }}>scroll down</span>
+        <ChevronDown size={16} className="text-amber-900" />
       </motion.div>
 
       {/* Bottom checkered strip */}
@@ -328,7 +330,12 @@ const EnvelopeSection = () => {
     <section
       ref={ref}
       className="relative py-16 px-4 overflow-hidden"
-      style={{ background: "linear-gradient(180deg, #fef3c7 0%, #fdf6e3 100%)" }}
+      style={{
+        backgroundImage: `url(${component2})`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      }}
     >
       {/* Section label */}
       <motion.div
@@ -684,7 +691,12 @@ const MusicSection = () => {
     <section
       ref={ref}
       className="relative py-16 px-4 overflow-hidden"
-      style={{ background: "#fdf6e3" }}
+      style={{
+        backgroundImage: `url(${component3})`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      }}
     >
       {/* Torn top */}
       <div
@@ -698,9 +710,9 @@ const MusicSection = () => {
         transition={{ duration: 0.6 }}
         className="text-center mb-8 pt-4"
       >
-        <span className="font-caveat text-amber-600 text-lg">— songs for you —</span>
+        <span className="font-caveat text-black text-lg">— songs for you —</span>
         <h2 className="font-playfair italic text-amber-900 text-3xl mt-1">Our Playlist ♪</h2>
-        <p className="font-kalam text-amber-700 text-sm mt-2 opacity-70">songs that remind me of you</p>
+        <p className="font-kalam text-black text-sm mt-2 opacity-70">songs that remind me of you</p>
       </motion.div>
 
       {/* Cassette player header */}
