@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { Heart, Music, Play, Pause, ExternalLink, Star, RotateCcw, ChevronDown } from "lucide-react";
+import image1 from "./assets/image1.jpeg";
+import component1 from "./assets/component1.jpg";
 
 // ============================================================
 // 🎨 FONT IMPORTS
@@ -142,7 +144,12 @@ const HeroSection = () => {
   return (
     <section
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4 py-12"
-      style={{ background: "linear-gradient(160deg, #fdf6e3 0%, #fef3c7 50%, #fde8c8 100%)" }}
+      style={{
+        backgroundImage: `linear-gradient(rgba(253, 246, 227, 0.68), rgba(253, 246, 227, 0.68)), url(${component1})`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      }}
     >
       {/* Checkered border strip at top */}
       <div className="checkered absolute top-0 left-0 right-0 h-5 opacity-60" />
@@ -220,11 +227,11 @@ const HeroSection = () => {
               borderRadius: 2,
             }}
           >
-            {/* ✏️ REPLACE THIS with an <img> tag for a real photo */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center opacity-40">
-              <span style={{ fontSize: "3rem" }}>📷</span>
-              <p className="font-caveat text-amber-700 text-sm mt-2">your photo here</p>
-            </div>
+            <img
+              src={image1}
+              alt="A special memory"
+              className="absolute inset-0 h-full w-full object-cover"
+            />
 
             {/* Warm light overlay */}
             <div
